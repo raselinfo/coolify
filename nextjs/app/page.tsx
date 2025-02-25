@@ -75,7 +75,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent animate-pulse-slow"></div>
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-8 animate-glow">
-            Modern Self-Hosting
+            Modern Rasel Self-Hosting
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 mt-2">
               Made Simple
             </span>
