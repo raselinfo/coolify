@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  nginx:
+    build:
+      context: ./nginx-config
+    ports:
+      - "80:80" # non SSL
+      - "443:443" # SSL
+    volumes:
+      - ./nginx-config/keys:/etc/nginx/keys:ro
+    depends_on:
+      - app1
+      - app2
+      - app3
+
+  app1:
+    build: .
+    expose:
+      - "4000" # Only expose internally, don't publish to host
+    environment:
+      - APP_NAME=app1
+
+  app2:
+    build: .
+    expose:
+      - "4000"
+    environment:
+      - APP_NAME=app2
+
+  app3:
+    build: .
+    expose:
+      - "4000"
+    environment:
+      - APP_NAME=app3
